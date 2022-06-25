@@ -1,13 +1,14 @@
+import React from "react"
 import styled from "styled-components";
 
-const Flex = (props) => {
+const Flex = React.forwardRef((props, ref) => {
     const { styles, children } = props;
     return (
-        <FlexDiv style={styles}>
+        <FlexDiv style={styles} ref={ref}>
             {children}
         </FlexDiv>
     )
-}
+})
 
 const FlexDiv = styled.div`
     display: flex;

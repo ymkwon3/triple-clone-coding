@@ -1,8 +1,11 @@
 import { Flex } from "../../elements";
 
 const Footer = () => {
+    const style = {
+        backgroundColor: "#FAFAFA"
+    }
     return (
-        <Flex>
+        <Flex styles={style}>
             푸터입니다.
         </Flex>
     )
