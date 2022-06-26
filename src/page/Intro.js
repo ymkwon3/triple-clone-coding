@@ -5,7 +5,7 @@ const Intro = () => {
 
     return (
         <Flex>
-            <Header></Header>
+            {/* <Header></Header> */}
             <Section1></Section1>
             <Section2></Section2>
             <Footer></Footer>
