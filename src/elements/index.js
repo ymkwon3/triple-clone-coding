@@ -1,4 +1,4 @@
 import Flex from "./Flex";
 import IncreaseText from "./IncreaseText";
-
-export { Flex, IncreaseText }
+import Award from "./Award";
+export { Flex, IncreaseText, Award }
