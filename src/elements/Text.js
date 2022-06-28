@@ -1,17 +1,18 @@
+import styled from "styled-components";
+
 const Text = (props) => {
     const { styles, children } = props;
 
-    const defaultStyles = {
-        fontSize: '17px',
-        fontWeight: '500',
-    }
-
-
     return (
-        <p style={{ ...defaultStyles, ...styles }}>
+        <StyledP style={styles}>
             {children}
-        </p>
+        </StyledP>
     )
 }
+
+const StyledP = styled.p`
+    font-size: 17px;
+    font-weight: 500;
+`;
 
 export default Text;

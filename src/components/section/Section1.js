@@ -16,7 +16,7 @@ const Section1 = () => {
         if (view) {
             cursor.style.opacity = 1;
             // 이 컴포넌트가 화면에 보여진다면 요소들을 순서대로 fade 애니메이션을 실행합니다.
-            animationRef.current.className = 'fade-enter-active';
+            animationRef.current.className += '-active';
         }
     }, [view])
 
@@ -30,7 +30,7 @@ const Section1 = () => {
                 </LinkText>
             </Flex>
             <Flex styles={{ flexDirection: 'row', width: '1040px', alignItems: 'start', marginTop: '104px' }} ref={animationRef} className='fade-enter'>
-                <Flex styles={{ alignItems: 'start', flex: 1, marginTop: '-9px' }}>
+                <Flex styles={{ alignItems: 'start', flex: '1', marginTop: '-9px' }}>
                     <Text styles={{ fontSize: '90px', fontWeight: 'bold', color: '#fff', letterSpacing: '-3px', marginLeft: '-4px', lineHeight: '99px', userSelect: 'none' }}>
                         여행의 모든 것<br />
                         트리플로 한 번에

@@ -1,19 +1,21 @@
+import styled from "styled-components";
+
 const LinkText = (props) => {
     const { styles, _onClick, children } = props;
 
-    const defaultStyles = {
-        textDecoration: 'none',
-        fontSize: '17px',
-        fontWeight: '500',
-        cursor: 'pointer',
-        userSelect: 'none',
-    }
-
     return (
-        <a style={{ ...defaultStyles, ...styles }} onClick={_onClick}>
+        <StyledA style={styles} onClick={_onClick}>
             {children}
-        </a>
+        </StyledA>
     )
 }
+
+const StyledA = styled.a`
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+`;
 
 export default LinkText;

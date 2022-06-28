@@ -1,21 +1,22 @@
 import React from "react"
+import styled from "styled-components";
 
 const Flex = React.forwardRef((props, ref) => {
     const { styles, className, children } = props;
 
-    const defaultStyles = {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%'
-    }
-
     return (
-        <div style={{ ...defaultStyles, ...styles }} ref={ref} className={className}>
+        <StyledDiv style={{ ...styles }} ref={ref} className={className}>
             {children}
-        </div>
+        </StyledDiv>
     )
 })
+
+const StyledDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+`;
 
 export default Flex;
