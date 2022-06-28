@@ -1,7 +1,10 @@
 import React from 'react';
 
 const useIntersectionObserver = (cursor) => {
+    // 요소가 화면에 보일 경우 view: true
     const [view, isView] = React.useState(false);
+
+    // observer에 의해 요소가 threshold 만큼 보이면 실행되는 콜백함수
     const intersectCallback = ([entry], observer) => {
         if (!entry.isIntersecting) {
             // 해당 요소가 뷰에 threshold 만큼 보이지 않을 경우

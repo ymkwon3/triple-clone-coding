@@ -5,33 +5,6 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import { triple, playstore, apple } from '../../image';
 import { Flex, IncreaseText, Award } from "../../elements";
 
-// 이 컴포넌트의 최상위 요소의 스타일입니다.
-const defaultStyles = {
-    background: "inherit",
-    height: "552px",
-    width: "1040px",
-    flexDirection: 'row',
-    justifyContent: "start",
-    alignItems: 'start',
-    position: 'relative',
-    opacity: '0'
-}
-
-// 좌측 이미지 스타일입니다.
-const imageStyles = {
-    position: 'absolute',
-    backgroundImage: `url(${triple})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "400px 338px",
-    width: '400px',
-    height: '330px',
-    textAlign: 'center',
-    paddingTop: '280px',
-    top: '150px',
-    color: 'rgba(58, 58, 58, 0.7)',
-    fontSize: '15px',
-    lineHeight: '15px'
-}
 
 const Section2 = () => {
     // intersection obsever를 위한 dom 요소를 가지는 state입니다.
@@ -76,7 +49,6 @@ const Section2 = () => {
                             <IncreaseText number={470} unit="만 개" target="의 여행 일정"></IncreaseText>
                         </>
                     }
-
                 </Flex>
                 <Flex styles={{ flexDirection: 'row', width: '417px', justifyContent: 'start', whiteSpace: 'nowrap' }} ref={r => animationRefList.current[2] = r} className='fade-enter'>
                     <Award url={playstore}>
@@ -89,9 +61,36 @@ const Section2 = () => {
                     </Award>
                 </Flex>
             </Flex>
-
         </Flex>
     )
+}
+
+// 이 컴포넌트의 최상위 요소의 스타일입니다.
+const defaultStyles = {
+    background: "inherit",
+    height: "552px",
+    width: "1040px",
+    flexDirection: 'row',
+    justifyContent: "start",
+    alignItems: 'start',
+    position: 'relative',
+    opacity: '0'
+}
+
+// 좌측 이미지 스타일입니다.
+const imageStyles = {
+    position: 'absolute',
+    backgroundImage: `url(${triple})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "400px 338px",
+    width: '400px',
+    height: '330px',
+    textAlign: 'center',
+    paddingTop: '280px',
+    top: '150px',
+    color: 'rgba(58, 58, 58, 0.7)',
+    fontSize: '15px',
+    lineHeight: '15px'
 }
 
 

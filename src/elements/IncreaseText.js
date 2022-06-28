@@ -1,15 +1,5 @@
 import React from "react"
 
-// 이 컴포넌트의 최상위 요소의 스타일입니다.
-const defaultStyles = {
-    width: '420px',
-    fontSize: '36px',
-    color: '#3A3A3A',
-    letterSpacing: '-1px',
-    marginBottom: '20px',
-    lineHeight: '36px',
-}
-
 // ease out 효과를 주기 위한 함수입니다.
 function easeOutQuart(x) {
     return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
@@ -30,7 +20,7 @@ const IncreaseText = (props) => {
 
     React.useEffect(() => {
         let count = 0;
-        // count: 연산이 실행되는 횟수입니다. 2초에 60번만큼 실행합니다.
+        // count: 연산이 실행되는 횟수입니다. 2초에 n번만큼 실행합니다.
         const increase = setInterval(function () {
             count += 1 / n;
             const progress = easeOutQuart(count)
@@ -51,6 +41,16 @@ const IncreaseText = (props) => {
             {target}
         </div>
     )
+}
+
+// 이 컴포넌트의 최상위 요소의 스타일입니다.
+const defaultStyles = {
+    width: '420px',
+    fontSize: '36px',
+    color: '#3A3A3A',
+    letterSpacing: '-1px',
+    marginBottom: '20px',
+    lineHeight: '36px',
 }
 
 export default IncreaseText;
