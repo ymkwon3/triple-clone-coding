@@ -2,7 +2,6 @@
   "name": "triple-clone-coding",
   "version": "0.1.0",
   "private": true,
-  "prettier": "@titicaca/eslint-config-triple/prettierrc",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -17,11 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint:etc": "prettier '**/*.{json,yaml,md}' --check",
-    "lint:etc:fix": "prettier '**/*.{json,yaml,md}' --write",
-    "lint:style": "stylelint './**/*.{js,ts,tsx}'",
-    "lint:style:fix": "stylelint './**/*.{js,ts,tsx}' --fix"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -40,8 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@titicaca/eslint-config-triple": "^3.1.0"
   }
 }

@@ -5,7 +5,7 @@ import Intro from './page/Intro';
 const App = () => {
 
   return (
-    <Flex>
+    <Flex styles={{ minWidth: '1200px' }}>
       <Intro></Intro>
     </Flex>
   );
