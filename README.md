@@ -9,10 +9,6 @@ npm install
 ```
 npm start
 ```
-만일 프로젝트가 제대로 실행되지 않는다면, 아래의 주소로 프로젝트 실행을 확인할 수 있습니다.
-```
-http://ymkwon.s3-website.ap-northeast-2.amazonaws.com/
-```
 
 
 ## :books: 사용한 기술과 선택한 이유
